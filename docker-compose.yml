@@ -6,6 +6,8 @@ services:
     image: postgres
     volumes:
        - ./docker/db:/var/lib/postgresql
+    env_file:
+      - ".env"
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -13,6 +15,8 @@ services:
     ports:
       - 5432:5432
     restart: always
+    networks:
+      - internal
 
   php:
     container_name: avido_php
