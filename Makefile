@@ -23,5 +23,8 @@ stop: ## Stop contrainers
 php-bash:
 	docker exec -it --user www-data $(PHP_CONTAINER) bash
 
+composer-install:
+	docker exec -it $(PHP_CONTAINER) sh -c "composer install"
+
 migrate-up:
 	docker exec -it $(PHP_CONTAINER) sh -c "php artisan migrate"

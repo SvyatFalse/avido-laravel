@@ -28,6 +28,11 @@ http://localhost
 git@github.com:SvyatFalse/avido-laravel.git
 ```
 
+Копируем .env
+```console
+cp .env.example .env
+```
+
 Билдим контейнеры
 ```console
 make build

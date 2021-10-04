@@ -4,23 +4,23 @@ RUN ln -sf /usr/share/zoneinfo/Europe/Samara /etc/localtime
 
 RUN apt-get update \
 && apt-get install -y git \
-                      cron \  				          
+                      cron \
                       zlib1g-dev \
                       libfreetype6-dev \
                       openssl \
                       libpq-dev \
-    				          unzip \
-    				          vim \
+    				  unzip \
+    				   vim \
                       nano \
-    				          wget \                                      
+    				  wget \
                       libzip-dev \
                       libpng-dev \
 && docker-php-ext-install pdo \
 						  pgsql \
 						  pdo_pgsql \
-						  zip \ 
+						  zip \
 						  bcmath \
-						  gd \ 
+						  gd \
 						  tokenizer \
 						  exif \
 && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
